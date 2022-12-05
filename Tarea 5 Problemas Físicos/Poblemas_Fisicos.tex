@@ -1,0 +1,227 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{mathrsfs}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage[a4paper]{geometry}
+\geometry{top=1.8cm, bottom=1.8cm, left=1.5cm, right=1.5cm}
+
+\pagestyle{fancy}
+\lhead{Emiliano Guti\'errez Luengas}
+
+\title{Problemas Fisicos}
+\author{Emiliano Gutiérrez Luengas}
+\date{Noviembre 2022}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+    \item [a)]  Considerando un sistema en una dimensi\'on y sabiendo que $a= \frac{dv}{dt}$ y $v= \frac{dx}{dt}$, demuestre que la posici\'on se puede ver como:
+
+\begin{center}
+    $x = x_0 + v_0t + \frac{1}{2}at^2$
+\end{center}
+
+Sean $a= \frac{dv}{dt}$ y $v= \frac{dx}{dt}$, entonces tenemos que,
+
+\begin{equation}
+\label{second_derivative_displacement}
+a= \frac{d}{dt} \cdot \frac{dx}{dt} = \frac{d^2x}{dt^2}
+\end{equation} \\
+
+Integramos ambos lados de la ecuaci\'on \ref{second_derivative_displacement} dos veces:
+
+\begin{align*}
+&\Rightarrow  \int a dt = \int \frac{d^2x}{dt^2} dt \\
+&\Rightarrow at + c =\frac{dx}{dt} dt \\
+&\Rightarrow  \int at + c dt = \int \frac{dx}{dt} dt \\
+&\Rightarrow a \int t dt + c \int dt = \int \frac{dx}{dt} dt \\ 
+\end{align*}
+
+Esto da como resultado:
+
+\begin{equation}
+\label{Displacement_when_accelerating}
+    \frac{1}{2}at^2 + ct + d = x
+\end{equation}
+
+Considerando que la funci\'on da como resultado una posici\'on, representada por la vairable 'x', es posible deducir que  c y d representan la velocidad y posici\'on inicial respectivamente. Por lo tanto, la ecuaci\'on \ref{Displacement_when_accelerating}:
+
+\begin{center}
+$\frac{1}{2}at^2 + ct + d = x \Rightarrow \frac{1}{2}at^2 + v_0t + x_0 = x$
+\end{center}
+
+
+    \item [b)] Considere una carrera entre dos coches, estos arrancando del reposo, mas el primer coche sale un segundo antes que el segundo. Los carros tienen una aceleraci\'on de $3.5 m\slash s^2$ y $4.9 m\slash s^2$ respectivamente. Encuentra:
+
+    \begin{itemize}
+        \item [i] En que momento el auto dos alcanza al auto uno:
+        \item [ii] La posici\'on cuando el segundo alcance al primero:
+        \item [iii] La velocidad para ambos carros en ese punto:
+        \item [iv] 5 tiempos diferentes, 3 antes del tiempo cuando los carros se encuentran, y 2 despu\'es. Consecuentemente, realicen dos tablas, una para cada auto, con la siguiente informaci\'on; aceleraci\'on, tiempo, posici\'on y velocidad. \\
+\end{itemize}
+
+    Sea la posici\'on del auto uno definido por:
+
+    \begin{equation}
+    \label{Carro_uno}
+        (x-x_0) = \frac{1}{2}a(t_1)^2 + v_1(t_1)
+    \end{equation}
+
+    y la posici\'on del auto dos:
+      
+    \begin{equation}
+    \label{Carro_dos}
+        (x-x_0) = \frac{1}{2}a(t_2)^2 + v_2(t_2)
+    \end{equation}
+    
+Con $t_1 = t+1$ y $t_2 = t$. Igualmente, para determinar el momento en que el auto uno alcanza al auto dos, se debe de igualar la ecuaci\'on \ref{Carro_uno} a la ecuaci\'on \ref{Carro_dos}:
+
+\begin{align*}
+    &\Rightarrow \frac{1}{2}a(t_2)^2 + v_2(t_2) = \frac{1}{2}a(t_1)^2 + v_1(t_1) \\
+    &\Rightarrow  \frac{1}{2}a(t)^2 + v_2(t) = \frac{1}{2}a(t+1)^2 + v_1(t+1)
+\end{align*}
+
+Reemplazando los valores para la aceleraci\'on, se obtiene que:
+
+\begin{align*}
+    &\Rightarrow  \frac{1}{2} 4.9(t)^2 + 0(t) = \frac{1}{2} 3.5(t+1)^2 + 0(t+1) \\
+    &\Rightarrow \frac{4.9}{2}t^2 = \frac{3.5}{2}(t^2 + 2t + 1) \\
+    &\Rightarrow \frac{4.9}{2}t^2 - \frac{3.5}{2}t^2 = 3.5t + \frac{3.5}{2} \\
+    &\Rightarrow 1.4t^2 - 7t - 3.5 = 0 
+\end{align*}
+
+Aplicando la formula general para la resoluci\'on de ecuaciones de segundo grado se obtiene que:
+
+\begin{center}
+    $t' = 5.458$,  $t'' = -0.458$
+\end{center}
+
+Por deducci\'on, el tiempo tomado para que el segundo auto alcance al primero es de 5.458 segundos.
+
+Una vez obtenido el valor de t, es facil determinar la posici\'on de los autos en aquel momento. Simplemente reemplazando en la ecuaci\'on \ref{Carro_dos}, se obtiene que:
+ \begin{align*}
+     &\Rightarrow (x-x_0) = \frac{1}{2}a(5.458)^2 + v_2(5.458) \\
+     &\Rightarrow (x-x_0) = \frac{4.9}{2}\cdot 29.789764 + 0(5.458) \\
+     &\Rightarrow (x-x_0) = 72.9849218
+ \end{align*}
+
+ Tomando en cuenta que la posici\'on inicial es la misma para cada veh\'iculo, o sea, cero, entonces:
+
+ \begin{center}
+     x = 72.9849218 m
+ \end{center}
+
+ Para obtener la velocidad, se deber\'an de derivar las ecuaciones \ref{Carro_uno} y \ref{Carro_dos}, que lleva a:
+
+ \begin{equation}
+ \label{velocidad_carro_uno}
+     \frac{dx}{dt} = a(t_1) + v_1 = v_{c1}
+ \end{equation}
+ \begin{equation}
+ \label{velocidad_carro_dos}
+     \frac{dx}{dt} = a(t_2) + v_2 = v_{c2}
+ \end{equation}
+
+Reemplazando por t', se obtiene que:
+
+\begin{align*}
+   &\Rightarrow v_{c1} = a(t+1) + 0 \\
+   &\Rightarrow v_{c1} = 3.5(6.458) + 0 \\
+   &\Rightarrow v_{c1} = 22.603 \frac{m}{s}
+\end{align*}
+
+Y
+
+\begin{align*}
+   &\Rightarrow v_{c2} = a(t) + 0 \\
+   &\Rightarrow v_{c2} = 4.9(5.458) + 0 \\
+   &\Rightarrow v_{c2} = 26.7442 \frac{m}{s}
+\end{align*}
+
+
+Obteniendo los valores de la posici\'on y la velocidad  del auto 1, para los tiempos 0, 1, 2, 6 y 7, se obtiene que: \\
+
+
+\begin{tabular}{|cllll|}
+\hline
+\multicolumn{5}{|c|}{Auto 1}                                                                                                                              \\ \hline
+\multicolumn{2}{|l|}{Variables No Dependientes del Tiempo} & \multicolumn{3}{l|}{Variables Dependientes del Tiempo}                                       \\ \hline
+\multicolumn{2}{|c|}{Aceleración}                          & \multicolumn{1}{c|}{Tiempo} & \multicolumn{1}{c|}{Posición} & \multicolumn{1}{c|}{Velocidad} \\ \hline
+\multicolumn{2}{|c|}{\multirow{5}{*}{3.5}}                 & \multicolumn{1}{l|}{0}      & \multicolumn{1}{l|}{1.75}     & 3.5                            \\ \cline{3-5} 
+\multicolumn{2}{|c|}{}                                     & \multicolumn{1}{l|}{1}      & \multicolumn{1}{l|}{7}        & 7                              \\ \cline{3-5} 
+\multicolumn{2}{|c|}{}                                     & \multicolumn{1}{l|}{2}      & \multicolumn{1}{l|}{15.75}    & 10.5                           \\ \cline{3-5} 
+\multicolumn{2}{|c|}{}                                     & \multicolumn{1}{l|}{6}      & \multicolumn{1}{l|}{85.75}    & 24.5                           \\ \cline{3-5} 
+\multicolumn{2}{|c|}{}                                     & \multicolumn{1}{l|}{7}      & \multicolumn{1}{l|}{112}      & 28                             \\ \hline
+\end{tabular} \\
+
+De igual manera, obteniendo los valores de la posici\'on y la velocidad  del auto 2 para los tiempos 0, 1, 2, 6 y 7, se obtiene que: \\
+
+\begin{table}[h]
+\begin{tabular}{|cllll|}
+\hline
+\multicolumn{5}{|c|}{Auto 2}                                                                                                                              \\ \hline
+\multicolumn{2}{|l|}{Variables No Dependientes del Tiempo} & \multicolumn{3}{l|}{Variables Dependientes del Tiempo}                                       \\ \hline
+\multicolumn{2}{|c|}{Aceleración}                          & \multicolumn{1}{c|}{Tiempo} & \multicolumn{1}{c|}{Posición} & \multicolumn{1}{c|}{Velocidad} \\ \hline
+\multicolumn{2}{|c|}{\multirow{5}{*}{4.9}}                 & \multicolumn{1}{l|}{0}      & \multicolumn{1}{l|}{0}        & 0                              \\ \cline{3-5} 
+\multicolumn{2}{|c|}{}                                     & \multicolumn{1}{l|}{1}      & \multicolumn{1}{l|}{2.45}     & 4.9                            \\ \cline{3-5} 
+\multicolumn{2}{|c|}{}                                     & \multicolumn{1}{l|}{2}      & \multicolumn{1}{l|}{9.8}      & 9.8                            \\ \cline{3-5} 
+\multicolumn{2}{|c|}{}                                     & \multicolumn{1}{l|}{6}      & \multicolumn{1}{l|}{88.2}     & 29.4                           \\ \cline{3-5} 
+\multicolumn{2}{|c|}{}                                     & \multicolumn{1}{l|}{7}      & \multicolumn{1}{l|}{120.05}   & 34.3                           \\ \hline
+\end{tabular}
+\end{table}
+
+
+ 
+    \item [c)] Considere el siguiente sistema: dos bloques de masa $m_1$ y $m_2$ estan unidos por una cuerda ideal y descanzan sobre una superficie horizontal sin roce. Si una fuerza de magnitud A se le aplica al bloque de la masa $m_2$ horizontalmente, en la direcci\'on opuesta a la posici\'on del bloque de masa $m_1$, realice los respectivos diagramas de cuerpo libre y an\'exelo con una imagen. A partir de estos, determine la aceleraci\'on del sistema y la tensi\'on de la cuerda entre los bloques. \\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.12]{IMG-1445.jpg}
+    \caption{Diagrama de Cuerpo Libre para dos Bloques}
+    \label{Diagrama_cuerpo_libre}
+\end{figure}
+
+El sistema puede ser dividido en dos diagramas de cuerpo libre, facilitando los calculos \textit{a priori}. De esta forma, se puede ver que la aceleraci\'on del segundo bloque es:
+
+\begin{center}
+    $a_2 = \frac{A}{m_2}$
+\end{center}
+
+y, 
+
+\begin{center}
+    $a_1 = \frac{T}{m_1}$
+\end{center}
+
+De igual forma, se tiene que:
+
+\begin{center}
+    $A - T = \sum F = m_s \cdot a_s$
+\end{center}
+
+Donde, 
+\begin{center}
+    $m_s = (m_1 + m_2)$, $a_s = a_1 + a_2$
+\end{center}
+
+De forma que,
+
+\begin{center}
+    $A - T = (m_1 + m_2)\cdot (a_1 + a_2)$
+\end{center}
+
+\begin{center}
+    $\therefore T = A - ((m_1 + m_2)\cdot (a_1 + a_2))$
+\end{center}
+
+\end{itemize}
+\end{document}
