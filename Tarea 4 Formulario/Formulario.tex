@@ -1,0 +1,134 @@
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{mathrsfs}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\lhead{Emiliano Gutiérrez Luengas}
+
+\title{Listado General de F\'ormulas Matem\'aticas}
+\author{Emiliano Gutiérrez Luengas}
+\date{Octubre 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{Vectores}
+\begin{itemize}
+    \item[a] \textcolor{red}{$\lambda(x_1, x_2, ... , x_n) = (\lambda x_1, \lambda x_2, .... , \lambda x_n)$} \newline
+
+    Propiedad Distributiva de la multiplicaci\'on: Propiedad que explica que un vector $\vec V \in R^{n}$ multiplicado por un escalar $\lambda$ es igual a cada componente del vector ultiplicado por el escalar. En pocas palabras, el escalar es multiplicado por cada elemento que compone al vector. \newline
+
+    \item[a] $(\lambda_1, \lambda_2) = \lambda_1(1,0) + \lambda_2(0,1) $ tal que $ \lambda_1, \lambda_2 \in R^2 \newline \Rightarrow (\lambda_1, \lambda_2, ... , \lambda_n) = \displaystyle \sum_{\substack{i=0}}^{n}\lambda_i e_i \Leftrightarrow (\lambda_1, \lambda_2, ... , \lambda_n) - \displaystyle \sum_{\substack{i=0}}^{n}\lambda_i e_i = 0 \newline$ tal que $ \lambda_1, \lambda_2, ... \lambda_n \in R$ \newline
+
+    Combinaci\'on lineal de un vector en $R^{n}$: Descomposici\'on de un vector en $R^{n}$ en n vectores unitarios, multiplicados cada uno por un $\lambda$, as\'i generalizando la forma de un vector en $R^{n}$. \newline
+
+    \item[a] Sean $\vec v, \vec u$ vectores en $R^n$, entonces $\vec v \cdot \vec u = \displaystyle \sum_{i=1}^{n} v_iu_i$ \newline
+
+    Producto punto: Operaci\'on dada entre vectores en $R^{n}$ tal que el resultado de dicha da un escalar. La operaci\'on en cuesti\'on es "entrada por entrada", sumando el resultado del producto. En otras palabras, se multiplican los elementos correspondientes y luego se suman los resultados. \newline
+    
+    \item[a] Sean $\vec v, \vec u$ vectores en $R^3$, entonces $\vec v \times \vec u = [(v_yu_z - v_zu_y)\hat{i} -(v_xu_z - v_zu_x)\hat{j} + (v_xu_y - v_yu_x)\hat{k}]$ \newline
+
+    Producto cruz: Operaci\'on entre vectores en $R^{3}$ cuyo fin es producir otro vector. Se utiliza el m\'etodo de cofactores para obtener tres determinantes de 2x2, que son multiplicadas por los vectores $\hat i, \hat j, \hat k$. En pocas palabras, es una multiplicacion entre escalares y vectores unitarios. \newline
+    
+    \item[a] Sean $\vec v, \vec u, \vec r$ vectores en $R^3$, entonces $\vec r \cdot (\vec v \times \vec u) = (r_x \cdot (\vec v \times \vec u)_x) + (r_y \cdot (\vec v \times \vec v)_y) + (r_z \cdot (\vec v \times \vec u)_z)$ \newline
+
+    Triple producto escalar: operaci\'on entre tres vectores, cuya finalidad es obtener un escalar. Primeramente, para poder realizar el producto punto (ya que este s\'olo se puede realizar entre vectores), se realiza el producto cruz con los primeros vectores $\vec u, \vec v$. Una vez realizado, se multiplica cada componente del vector $\vec{v \times u}$ por la componente correspondiente de $\vec r$, para luego sumar los resultados. \newpage
+
+\section{Matrices}
+    \item[b] \textcolor{blue}{Sean $A,B \in M_{nxm}$, entonces $A+B = a_ij + b_ij$} \newline
+    
+    Suma entre dos matrices: La suma entre matrices puede ser definida como la suma "entrada por entrada", denotada generalmente como $a_ij$. Como la suma entre elementos es exclusiva para los elementos que comparten la misma columna y el mismo rengl\'on, no es posible realizar sumas entre matrices que no tengan la misma cantidad de renglones y columnas. \newline
+    
+    \item[b] Sean $A\in M_{nxm}, B\in M_{mxr}$, entonces $AB = \displaystyle \sum_{k}^{m} a_{ik}b_{kj}$, donde $AB \in M_{nxr}$ \newline
+
+    Multiplicaci\'on entre dos matrices: La multiplicaci''on entre matrices puede ser definida como la suma de la multiplicaci\'on "entrada por entrada" del rengl\'on de la primera por la columna de la segunda. En pocas palabras, se multiplica el elemento del rengl\'on con el elemento de la columna correspondiente, para luego sumar el resultado. Por ejemplo $a_{11}b_{11} + a_{12}b_{21}... a_{1m}b_{m1}$. Una vez completada la suma, se realiza la misma operaci\'on, pero con la siguiente columna de la segunda matriz, hasta haber realizado la operaci\'on con todas las columnas. Seguido de esto, se realiza la misma operaci\'on, pero ahora con el segundo rengl\'on de la primera, hasta haber multiplicado cada columna de la segunda por cada rengl\'on de la primera. \newline
+
+    Nota: El producto entre matrices no es conmutativo.
+    
+    \item[b] Sea $A \in M_{nxn}$, entonces $AB = BA$ tal que $B = Id{nxn}$ \newline
+
+    Matriz Identidad: La matriz identidad puede ser visualizada como el neutro multiplicativo de las matrices cuadradas. Al ser multiplicada por otra matriz, independiente del orden, dar\'a como resultado la matriz original. En otras palabras, el producto de una matriz cuadrada por la matriz identidad es conmutativo y su resultado es la matriz cuadrada inicial. \newline
+    
+    \item[b] Sea $A \in M_{3x3}$, entonces $|A| = \displaystyle \sum_{ijk}^{3} \epsilon_{ijk}$ $a_{1i}a_{2j}a_{3k}$ \newline
+
+    Determinante de una matriz de 3x3: Operaci\'on en la cual se multiplican las entradas de la diagonal, sumados a la multiplicaci\'on de la diagonal inferior y as\'i sucesivamente, restados por la suma de los productos de las "anti-diagonales". \newline
+    
+    Nota: La determinante es un valor que define a las matrices cuadradas y tiene varias funciones, tales como obtener la inversa de una funci\'on al multiplicar este por la matriz adjacente de la original (debe de ser una matriz cuadrada para que sea posible la operaci\'on). \newline
+    
+    \item[b] Sea $A\in M_{nxn}$, entonces $AA^{-1} = A^{-1}A = \frac{1}{|A|}(adj A) \cdot A = Id{nxn}$\newline
+
+    Inverso multiplicativo: Matriz producto de la multiplicaci\'on de la adjacente de una matriz cuadrada por uno sobre la determinante de esta. Cuando es multiplicada por la matriz original, los elementos se cancelan y dan como resultado a la matriz identidad. \newline
+    
+    Nota: Esta operaci\'on es conmutativa, ya que al final produce la misma matriz, siendo esta la identidad. \newpage
+    
+\section{Conjuntos}
+    \item[c] \textcolor{green}{$C = A \cup B = \{x | x\in A \lor x\in B\}$} \newline
+
+    Uni\'on: La uni\'on entre dos conjuntos A y B puede ser visto como un nuevo conjunto "C" que contiene todos  los elementos de los conjuntos A y B. Los elementos repetidos no se tomar\'an en cuenta m\'as de una vez, por lo que cada elemento es \'unico con respecto a sus cong\'eneres. \newline
+    
+    \item[c] $ D = A \cap B = \{x | x\in A \land x\in B\}$
+
+    Intersecci\'on: La intersecci\'on entre dos conjuntos A y B puede ser visto como un nuevo conjunto "D" que contiene solamente los elementos que comparten A y B. Elementos que s\'olo sean contenidos por uno de los conjuntos son descartados, por lo que si los conjuntos no compartieran ning\'un elemento, su intersecci\'on ser\'ia el vac\'io. \newline
+    
+    \item[c] $A^c = \{x|x\notin A\} \Leftrightarrow U - A$ \newline
+
+    Conjunto complemento: El complemento de un conjunto A es descrito como todos los elementos 'x', tal que estos elementos no pertenezcan al conjunto A. En otras palabras, es un nuevo conjunto, denominado $A^c$, el cual contiene todos los elementos del Universo, a excepci\'on de los elementos contenidos en A. Otra forma de verlo es el universo menos A. \newline
+    
+    \item[c] $(A \cup B)^c = (A^c \cap B^c)$ \newline
+
+    Ley de Morgan: Para este caso espec\'ifico de las leyes de Morgan, se explica que el componente del conjunto "C", donde C es el conjunto formado por la uni\'on de A y B, es lo mismo a la intersecci\'on de los conjuntos componente de A y B. \newline
+    
+    \item[c] $(A X B) = \{x, y | x \in A, y \in B\}$\newline
+
+    Producto cartesiano: El producto cartesiano de conjuntos es la descripci\'on multidimensional de varios conjuntos, donde cada uno maneja una variable diferente y, ergo, cada variable existe en una dimension diferente. Por ejemplo, el conjunto A trabaja con los valores en la recta X, mientras que B trabaja con los valores en la recta Y. Por lo tanto, no se puede operar directamente entre 'x' y 'y'. \newpage
+    
+\section{Divisibilidad y Congruencia}
+    \item[d] \textcolor{cyan}{Sea $m|a-b$, entonces $a\equiv b (mod m)$} \newline
+
+    Congruencia de dos valores en m\'odulo m: Dos valores son congruentes en m\'odulo m si la resta de uno por el otro es divisible por m. Esto significa que comparten el mismo valor absoluto, en el caso espec\'ifico de ese m\'odulo. \newline
+    
+    \item[d] Sea $a \equiv b $ y $ a-c \equiv b-d (mod m)$, entonces $ c\equiv d (mod m)$ \newline
+
+    Siendo a y b congruentes en m\'odulo m, se puede afirmar que si ambos valores son restados por un n\'umero fijo pero arbitrario, entonces seguir\'an siendo congruentes. De igual forma, si este valor arbitrario y fijo es congruente con un segundo elemento de igual caracter arbitrario y fijo en m\'odulo m, entonces la resta con respecto a los elementos citados con anterioridad seguir\'a siendo congruente. \newline
+    
+    \item[d] Sea p primo, entonces $a^p \equiv a (mod p)$ y $a^{p-1}\equiv 1 (mod p)$ \newline
+
+    Peque\~no teorema de Fermat: El teorema establece que para un n\'umero primo 'p' cualquiera, si un n\'umero es elevado a dicho, ser'a congruente consigo mismo en m\'odulo p. De igual forma, si el n\'umero es elevado al primo menos uno, entonces el n\'umero ser\'a congruente con 1. En otras palabras, un n\'umero elevado a p, menos si mismo elevado a 1 es divisible por p. Igualmente, ese n\'umero elevado a p-1 menos 1 es divisible por p.\newline
+    
+    \item[d] Sean $(a,b) = 1$, entonces $ax + by = 1$ \newline
+
+    M\'aximo Com\'un Divisor: N\'umero cuya caracter\'istica es que es el mayor n\'umero que puede dividir a dos n\'umeros arbitrarios, a y b, sin dejar un residuo o, en otras palabras, dar como resultado un n\'umero perteneciente a los racionales. La forma que adopta es la de a, multiplicado por un valor 'x', m\'as b, multiplicado por un valor 'y', deben de dar como resultado 1. \newline
+    
+    \item[d] Sean $(a,b) = a \Leftrightarrow a|b$ \newline
+
+    Divisibilidad de un n\'umero por otro: Se puede afirmar que si a es un divisor de b, sin que la operaci\'on produzca un residuo, entonces el m\'aximo com\'un divisor entre ambos valores ser\'a el menor. De igual forma, el mayor n\'umero que puede dividir a ambos sin dejar un residuo es el valor menor entre los dos. Esto es igual a decir que, siendo a menor a b, se tiene que a por un valor k dar\'a como resultado a b. \newpage
+    
+    
+\section{Din\'amica y Cinem\'atica} 
+    \item[e] \textcolor{magenta}{$\vec F = m\vec a$} \newline
+
+    Segunda ley de Newton: Ley establecida por Isaac Newton que establece una relaci\'on entre la fuerza ejercida por un objeto con la masa y la aceleraci\'on de este. Al tratarse del producto de un escalar por un vector, la fuerza adoptar\'a solamente la magnitud y sentido de la aceleraci\'on. \newline
+
+    \item[e] $\vec p =  m \vec v$ \newline
+
+    Momento: El momento es el producto de una operaci\'on entre escalar y vector, siendo estas la masa y la velocidad, respectivamente. La magnitud y el sentido del momento son heredados de la velocidad, ya que la masa no es un vector. \newline
+    
+    \item[e] $\frac{d\vec x}{dt} = \vec v$ \newline
+
+    Derivada del desplazamiento: La primera derivada del desplazamiento con respecto al tiempo. Determina cu\'anto tiempo tarda un objeto en recorrer una distancia, siendo esto a su vez definido como la velocidad del objeto en cuesti\'on. Tambi\'en es posible definirla como el radio de cambio de la distancia recorrida, por unidad de tiempo. Como el tiempo es un escalar, la velocidad hereda su magnitud y sentido del desplazamiento. \newline
+    
+    \item[e] $\frac{d}{dt}(\frac{dx}{dt}) = \frac{d^2 x}{dt^2} = a$ \newline
+
+    Segunda derivada del desplazamiento: La segunda derivada del desplazamiento con respecto al tiempo. Determina cu\'anto tiempo tarda un objeto en cambiar su velocidad, siendo a su vez definido esto como la aceleraci\'on del objeto en cuesti\'on. Igualmente, es posible definirlo como el radio de cambio de la velocidad con respecto al tiempo. Al tratarse el tiempo de un escalar, la aceleraci\'on hereda su magnitud y sentido de la velocidad. \newline
+    
+    \item[e] $(x-x_0) = \frac{a(t)^2}{2} + v_0(t)$ \newline
+
+    Desplazamiento de un objeto en aceleraci\'on: F\'ormula para el desplazamiento de un objeto acelerado, normalmente usada para hallar el desplazamiento de un objeto en ca\'ida libre, o que recorre una distancia de caracter parab\'olico. Suele considerarse principalmente a la aceleraci\'on ocasionada por la gravedad, mas es posible usarla para objetos artificialmente acelerados, pero requiere considerar la perdida de masa u otros elementos (caso particular de un cohete o un sistema de propulsi\'on que utilice gasolina u otro elemento que produzca una reacci\'on exot\'ermica). \newline
+    
+
+\end{itemize}
+
+\end{document}
